@@ -1,0 +1,26 @@
+{
+	"name": "node-queue",
+	"description": "Node library for queueing tasks",
+	"version": "0.0.1",
+	"author": "Jovan Sedlan",
+	"maintainers": [
+		{
+			"name": "Jovan Sedlan",
+			"email": "j.sedlan@gmail.com"
+		}
+	],
+	"homepage": "https://github.com/sedlan/node-queue",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sedlan/node-queue.git"
+	},
+	"main": "./lib/node-queue.js",
+	"licenses": [
+		{
+			"type": "GPLv3",
+			"url": "http://www.gnu.org/licenses/gpl-3.0.txt"
+		}
+	],
+	"engine": ["node >=0.4.1"],
+	"keywords": ["node", "queue", "tasks", "workers"]
+}
