@@ -31,7 +31,11 @@ You can define 'id' field, but if you omit it, one will be created automatically
 You can add a task to the task queue:
 
     var nodeq = require('node-queue');
-    nodeq.addTask(mytask);
+    nodeq.addTask(mytask, function(err, response, result) {
+        if (!err) {
+            console.log('Added a task with id: ' + result.id);
+        }
+    });
 
 Creating a worker is fairly simple:
 
@@ -40,4 +44,4 @@ Creating a worker is fairly simple:
         console.log('and its message: ' + task.taskData.message);
     });
 
-If a task is created, and node-queue cannot find a handling worker, it will stay in the queue until a valid worker is created.
+If a task is created, and node-queue cannot find a handling worker, the task will stay in the queue until a valid worker is created.
